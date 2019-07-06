@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>feedback form</title>
+	<link rel="stylesheet" type="text/css" href="feedbackform.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+#success_message{diplay:none;}
+
+  .open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+</style>
+<script>
+  $(document).ready(function() {
+    $('#contact_form').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            name: {
+                validators: {
+                        stringLength: {
+                        min: 2,
+                    },
+                        notEmpty: {
+                        message: 'Please enter your Name'
+                    }
+                }
+            },
+    
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your Email Address'
+                    },
+                    emailAddress: {
+                        message: 'Please enter a valid Email Address'
+                    }
+                }
+            },
+            contact_no: {
+                validators: {
+                  stringLength: {
+                        min: 12, 
+                        max: 12,
+                    notEmpty: {
+                        message: 'Please enter your Contact No.'
+                     }
+                }
+            },
+
+                }
+            }
+        })
+        .on('success.form.bv', function(e) {
+            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                $('#contact_form').data('bootstrapValidator').resetForm();
+
+            // Prevent form submission
+            e.preventDefault();
+
+            // Get the form instance
+            var $form = $(e.target);
+
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
+
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+        });
+});
+</script>
+</head>
+<body>
+	<h3> INSTA APPLY</h3>
+	<div>
+		
+
+		<input type="text" name="t1" placeholder="Enter name"><br><br>
+		<input type="text" name="t2" placeholder ="Enter email"  ><br><br>
+	   <input type="text" name="t3" placeholder ="Enter mobile no"  ><br><br>
+	   <select  name="state" >
+	   	<option value="select state">select state</option>
+	   	<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+        <option value="Haryana">Haryana</option>
+        <option value="Goa">Goa</option>
+      </select><br><br>
+      <select  name="city">
+	   	<option value="select city">select city</option>
+	   	<option value="Visakhapatnam">Visakhapatnam</option>
+	   	<option value="Bengaluru">Bengaluru</option>
+        
+      </select>
+      <br><br>
+
+	  
+
+	
+	   <textarea name="t6" placeholder="Enter Address"></textarea><br><br>
+
+
+  <input type="checkbox" name="qs" value="y/n">Yes, I want to subscribe for <br> &nbsp&nbsp&nbsp weekly news letter<br>
+ 
+		
+</div>		    
+<br>
+  <button type="button" class="open-button" data-toggle="modal" data-target="#myModal">How May I Help You!</button>
+
+ <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+<h1 >Chain Creator Support</h1>
+<center><h3>Leave A Message.....</h3></center>
+        <div class="modal-body">
+      <form class="well form-horizontal" action="" method="post" id="contact_form">
+
+<fieldset>
+<p style="font-size:100%"><strong>  NAME:</strong></p>
+<input type="text" placeholder="Name" style="font-size:100%;font-family:Lucida bright" required></input>
+<br>
+<br>
+<br>
+<p style="font-size:100%;"><strong>  E-MAIL:</strong></p>
+<input type="email" size="15" placeholder="Email id" style="font-size:100%;font-family:Lucida bright" required></input>
+<br>
+<br>
+<p style="font-size:100%"><strong>  MOBILE NUMBER:</strong></p>
+<input type="tel"  size="15" placeholder="Mobile number1" style="font-size:100%;font-family:Lucida bright"></input>
+<br><br>
+<input type="tel"  size="15" placeholder="Mobile number2" style="font-size:100%;font-family:Lucida bright;width=50%;"></input>
+<br><br>
+
+<div class="form-group">
+
+<label class="col-lg-4 control-label"><b>MESSAGE:</b></label>
+
+<div class="col-lg-4 inputGroupContainer">
+<div class="input-group">
+
+<textarea class="form-control" rows="7" id="comment"></textarea>
+</div>
+</div>
+</div>
+<a href="feedbackform.html">
+<center><input type="submit" value="SUBMIT" style="font-size:100%;font-family:Lucida bright"></input></center>
+</a>
+<br>
+<center><input type="reset" placeholder="reset" style="font-size:100%;font-family:Lucida bright"></input></center>
+<br>
+</form>
+
+
+</body>
+
+
+</fieldset>
+</form>
+</div>
+<br>
+ </div>
+    </div>
+
+
+</body>
+</html>

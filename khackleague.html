@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FARM ALONG</title>
+	<link rel="stylesheet" type="text/css" href="feedbackform.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+
+    }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:100px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+.button {
+  border-radius: 4px;
+  background-color: lavender;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+  </style>
+</head>
+<body>
+<table>
+
+<div>
+<img  class="logo" src="logo.jpg" width="180px" height="120px" >
+ <strong><font color="#006600" ><h1 style="font-family: Georgia;font-size: 30px;font-style: bold;float: right;">
+FARM ALONG</h1></font></div></strong>
+  <div class="header-right">
+</tr>
+
+<hr>
+<tr>
+
+
+<div class="container">
+
+  <ul class="nav nav-tabs">
+    <li><a data-toggle="tab" href="#cities">Cities</a></li>
+    <li><a data-toggle="tab" href="#industries">Industries</a></li>
+    <li><a data-toggle="tab" href="#items">Items</a></li>
+    <li><a data-toggle="tab" href="#aboutus">About Us</a></li>
+    <li><a data-toggle="tab" href="#contactus">Contact Us</a></li>
+    <li><a data-toggle="tab" href="#help">Help & Community</a></li>
+   <li><a data-toggle="tab" href="#updates">Updates</a></li>
+  </ul>
+
+  <div class="tab-content">
+  
+    <div id="cities" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Ut enim .</p>
+    </div>
+    <div id="industries" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed.</p>
+    </div>
+    <div id="items" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque.</p>
+    </div>
+   <div id="aboutus" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed.</p>
+    </div>
+    <div id="contactus" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque.</p>
+    </div>
+   <div id="help" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed.</p>
+    </div>
+   <div id="updates" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed.</p>
+    </div>
+
+  </div>
+</div>
+
+<hr></tr>
+</table>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">FARM ALONG</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Buyers</a></li>
+        <li><a href="#">Ementors</a></li>
+        <li><a href="#">Farmers</a></li>
+
+
+<li><a href="#">Services</a></li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Place An Order <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+     <li><a href="form.html">Membership</a></li>
+</ul>
+ 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="feedbackform.html"><span class="glyphicon glyphicon-log-in"></span> Login / Register NOW</a></li>
+      </ul>
+    <form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+</nav>
+<br>
+<div class="container"> 
+<pre style="font-family:Snap itc;font-size:30px">
+             To make agriculture sustainable, the grower has got to be able to make a profit.  
+</pre>
+</div>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="3.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h3>AGRICULTURE</h3>
+          <p>is our wisest pursuit,Because it will in the end contribute most to </p>
+<h4>REAL WEALTH,GOOD MORALS,AND HAPPINESS.</H4>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="1.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h3>ANIMAL HUSBANDARY</h3>
+          <p>provides livestock production.</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+  
+<div class="container text-center">    
+  <h3>Ecological Farm is to see the farm and balance each other <br>so that the farm can be self-sustainant with fooder and manure.</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="33.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>CROP ROTATION</p>
+    </div>
+    <div class="col-sm-4"> 
+      <img src="12.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <p>ANIMAL HUSBANDARY</p>    
+    </div>
+    <div class="col-sm-4">
+      <div class="well">
+<h4>CROP ROTATION:</h4><br>
+       <p>how crops are rotated depends upon many factors, including the type of soil, the climate, precipitation, and the markets for various crops.</p>
+      </div>
+      <div class="well">
+<h4>ANIMAL HUSBANDARY:</h4><br>
+       <p> It earns the farmer a good profit by its products.The excreta of the animals would act as a good manure that provides the crop good nutrients.. </p>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="container text-center"> 
+  <div class="row">
+<br>
+    <div class="col-sm-4"><br>
+     <img src="13.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <p>ORGANIC FERTILIZERS</p>
+    </div>
+    <div class="col-sm-4"> 
+      <img src="34.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>WEATHER FORECASTING</p>    
+    </div>
+    <div class="col-sm-4">
+      <div class="well">
+<h4>ORGANIC FERTILIZERS:</h4><br>
+       <p>No need to continually reapply fertilizers, compared with artificial fertilizers which require constant applications and heavy use.</p>
+      </div>
+      <div class="well">
+<h4>WEATHER   FORECASTING:</h4><br>
+       <p>Change in climate also influences the weather condition.under changing climate scenario,the weather forecasts are very important for planning.</p>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+
+<footer class="container-fluid text-center">
+<center>
+  
+<div id="social">
+  
+  
+  <a target="body" href="https://twitter.com/FranchiseIndia">
+    <img src="twitter.png" alt="image not found"  width="150px" height="100px">
+  </a>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <a target="body" href="https://www.facebook.com/FranchiseIndiaNews">
+    <img src="facebook.jpg" alt="image not found"  width="150px" height="100px">
+  </a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <a target="body" href="https://www.linkedin.com/company/franchise-india-holdings-limited?trk=tyah">
+    <img src="linkedin.png" alt="image not found"  width="110px" height="70px">
+  </a>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <a target="body" href="https://www.youtube.com/user/FranchiseIndia">
+    <img src="youtube.png" alt="image not found" width="150px" height="100px">
+
+  </a>
+</div>
+</center>
+
+<br><br>
+<center>
+ <button class="button"><a class="active" href=""><span>Home</span></a></button>
+  <button class="button"><a href="aboutus.html"><span>About Us</span></a></button>
+  <button class="button"><a href="contactus.html"><span>Contact</span></a></button>
+  <button class="button"><a href="feedback.html"><span>Feedback</span></a></button><br>
+  <button class="button"><a href="news.html"><span>News</span></a></button>
+  <button class="button"><a href="testinomials.html"><span>Testinomials</span></a></button>
+  <button class="button"><a href="terms.html"><span>Terms</span></a></button>
+ <button class="button"><a href="https://www.franchiseindia.com/sitemap"><span>Sitemap</span></a></button>
+</center>
+
+</footer>
+
+  <button type="button" class="open-button" data-toggle="modal" data-target="#myModal">How May I Help You!</button>
+
+ <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+<h1 >Chain Creator Support</h1>
+<center><h3>Leave A Message.....</h3></center>
+        <div class="modal-body">
+      <form class="well form-horizontal" action="" method="post" id="contact_form">
+
+<fieldset>
+<p style="font-size:100%"><strong>  NAME:</strong></p>
+<input type="text" placeholder="Name" style="font-size:100%;font-family:Lucida bright" required></input>
+<br>
+<br>
+<br>
+<p style="font-size:100%;"><strong>  E-MAIL:</strong></p>
+<input type="email" size="15" placeholder="Email id" style="font-size:100%;font-family:Lucida bright" required></input>
+<br>
+<br>
+<p style="font-size:100%"><strong>  MOBILE NUMBER:</strong></p>
+<input type="tel"  size="15" placeholder="Mobile number1" style="font-size:100%;font-family:Lucida bright"></input>
+<br><br>
+<input type="tel"  size="15" placeholder="Mobile number2" style="font-size:100%;font-family:Lucida bright;width=50%;"></input>
+<br><br>
+
+<div class="form-group">
+
+<label class="col-lg-4 control-label"><b>MESSAGE:</b></label>
+
+<div class="col-lg-4 inputGroupContainer">
+<div class="input-group">
+
+<textarea class="form-control" rows="7" id="comment"></textarea>
+</div>
+</div>
+</div>
+<a href="feedbackform.html">
+<center><input type="submit" value="SUBMIT" style="font-size:100%;font-family:Lucida bright"></input></center>
+</a>
+<br>
+<center><input type="reset" placeholder="reset" style="font-size:100%;font-family:Lucida bright"></input></center>
+<br>
+</form>
+
+
+</body>
+
+
+</fieldset>
+</form>
+</div>
+<br>
+ </div>
+    </div>
+</body>
+</html>
